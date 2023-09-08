@@ -5,7 +5,7 @@ import { useValueTypes } from "@typeful/vue-app/index";
 import { get, set } from "lodash";
 import { computed, defineComponent, h, PropType } from "vue";
 import { useI18n } from "vue-i18n";
-import DecInput from "./DecInput.ts";
+import DecInput from "./DecInput";
 
 export default defineComponent({
   inheritAttrs: false,
