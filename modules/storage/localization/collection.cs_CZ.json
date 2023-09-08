@@ -1,0 +1,12 @@
+{
+  "storage.collection.section.filter": "Filtrování",
+  "storage.collection.action.addFilter": "Přidat filtr",
+
+  "storage.collection.filter.match-true": "je",
+  "storage.collection.filter.match-false": "není",
+
+  "storage.collection.section.sorting": "Řazení",
+  "storage.collections.sortDirection.asc": "Vzestupně",
+  "storage.collections.sortDirection.desc": "Sestupně",
+  "storage.collections.sortDirection.none": "Ne"
+}

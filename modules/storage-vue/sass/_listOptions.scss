@@ -1,0 +1,37 @@
+/*
+  Base styles for the list config
+*/
+
+.list-options {
+  &:not([class*="-appearance-"]), &.-appearance-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    > * {
+      flex: 1;
+    }
+
+    section.list-option {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em 1em;
+
+      .section-heading {
+        width: 100%;
+      }
+
+      min-width: min(90%, 40ch);
+    }
+
+    > .submit-group {
+      display: flex;
+      justify-content: end;
+      min-width: 100%;
+    }
+  }
+
+  & + .list-items {
+    margin-block-start: 1rem;
+  }
+}

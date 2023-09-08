@@ -1,0 +1,12 @@
+.form-group {
+  .btn-group {
+    display: flex;
+  }
+}
+
+.dc-fi {
+  > label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
