@@ -1,9 +1,9 @@
 import { O } from "ts-toolbelt";
+import { merge } from "lodash";
 import { isRefSchema, RefSchema, Schema } from "@typeful/schema/Schema";
 import { createPath, FieldPath, FieldPathRaw, isFieldPath, pathToStr } from "./path/pathTypes";
 import { Recipe } from "@typeful/types/Recipe";
 import ValueTypes from "@typeful/types/ValueTypes";
-import { merge } from "lodash";
 
 export default class Model<T extends object = any> {
 
