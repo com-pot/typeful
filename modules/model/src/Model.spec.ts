@@ -1,10 +1,6 @@
-import ValueTypes from "@typeful/types/ValueTypes";
 import { describe, expect, it } from "vitest";
-import Model, { ModelContext } from "./Model";
+import Model from "./Model";
 
-const modelCtx: ModelContext = {
-  types: new ValueTypes(),
-}
 
 describe("Model", () => {
   const model = new Model({
@@ -25,7 +21,7 @@ describe("Model", () => {
         },
       },
     }
-  }, modelCtx)
+  })
 
   describe('locates individual fields', () => {
     it('userName', () => {

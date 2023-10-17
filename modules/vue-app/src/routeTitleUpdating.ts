@@ -1,6 +1,6 @@
 import { computed, reactive, ref } from "vue"
 
-import { TextRecipe } from "@typeful/model/recipes"
+import { TextRecipe } from "@typeful/vue-app/rendering"
 
 
 export function useAppTitle(appName?: string, separator: string = ' | ') {

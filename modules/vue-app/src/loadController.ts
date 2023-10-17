@@ -1,5 +1,5 @@
 import { App, computed, inject, InjectionKey, reactive, ref, watch } from "vue"
-import { TextRecipe } from "@typeful/model/recipes"
+import { TextRecipe } from "@typeful/vue-app/rendering"
 
 export type LoadController = {
   readonly loadingModules: Loadable[],

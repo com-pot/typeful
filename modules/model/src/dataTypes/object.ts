@@ -1,13 +1,14 @@
+import { Schema } from "../Schema"
 import { defineTypefulType } from "../dataTypes"
-import { SchemaField } from "../typeSystem"
 
-export type SchemaSpec = SchemaField & {
+
+export type SchemaSpec = Schema & {
     type: 'object',
-    properties: Record<string, SchemaField>,
+    properties: Record<string, Schema>,
 }
 type SchemaValue = Record<string, unknown>
 
-export const isSchemaSpec = (subj: SchemaField): subj is SchemaSpec => {
+export const isSchemaSpec = (subj: Schema): subj is SchemaSpec => {
     return 'properties' in subj && !!subj.properties && typeof subj.properties === "object"
 }
 

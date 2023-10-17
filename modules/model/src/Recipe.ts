@@ -1,7 +1,8 @@
-import { isFieldPath } from "@typeful/model/path/pathTypes";
 import { get } from "lodash";
+import { isFieldPath } from "./path/pathTypes";
 
 export type Recipe = any
+export type TextRecipe = string | {$t: string}
 
 export function compileRecipeEvalFn(recipe: Recipe) {
   return (ctx: Record<string, any>) => {

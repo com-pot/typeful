@@ -1,7 +1,8 @@
+import { Schema } from "../Schema"
 
-export type ListFieldSpec = SchemaField & {
+export type ListFieldSpec = Schema & {
     type: "array"
-    items: SchemaField,
+    items: Schema,
 }
 
 

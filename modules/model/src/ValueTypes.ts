@@ -1,5 +1,5 @@
-import { FieldRef } from "@typeful/model/Model";
-import { Schema, isRefSchema, getValueKeyFromSchemaOptions } from "@typeful/schema/Schema";
+import { FieldRef } from "./Model";
+import { Schema, isRefSchema, getValueKeyFromSchemaOptions } from "./Schema";
 import CollectionsService from "@typeful/storage/CollectionsService";
 import Registry from "@typeful/utils/Registry";
 

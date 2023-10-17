@@ -1,4 +1,4 @@
-import { defineTypefulType } from "../typeful";
+import { defineTypefulType } from "../dataTypes";
 
 export default defineTypefulType({
     validate() {

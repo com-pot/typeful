@@ -1,5 +1,5 @@
 import { diKeyModelRegistry } from "@typeful/model-vue/useModel";
-import Model, { ModelContext, ModelSpecRaw } from "@typeful/model/Model";
+import Model, { ModelSpecRaw } from "@typeful/model/Model";
 import { Schema } from "@typeful/schema/Schema";
 import CollectionsService from "@typeful/storage/CollectionsService";
 import ValueTypes from "@typeful/types/ValueTypes";
@@ -52,14 +52,11 @@ export default {
       moduleRegistry.put(name, module)
     })
 
-    const modelCtx: ModelContext = {
-      types: valueTypes,
-    }
     modelSpecEntries.forEach(([defaultName, specRaw]) => {
       const model = new Model({
         ...specRaw,
         meta: defaults({}, specRaw.meta, { name: defaultName }),
-      }, modelCtx)
+      })
       modelRegistry.put(model.spec.meta.name, model)
     })
 

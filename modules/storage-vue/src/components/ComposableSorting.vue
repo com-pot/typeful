@@ -4,7 +4,7 @@ import {useI18n} from "@typeful/vue-app/i18n"
 import { FieldRef } from "@typeful/model/Model"
 import { SortController } from "@typeful/storage-vue/collection/sorting"
 import FieldSelection from "./FieldSelection.vue"
-import { useRenderer } from "@typeful/model/recipes"
+import { useRenderer } from "@typeful/vue-app/rendering"
 
 const props = defineProps({
   ctrl: {type: Object as PropType<SortController>, required: true},

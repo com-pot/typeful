@@ -1,8 +1,8 @@
 import { FieldPathRaw } from "@typeful/model/path/pathTypes";
-import { SortController } from "@typeful/storage/collection/sorting";
 import { FilteringController } from "@typeful/storage-vue/collection/filter";
-import { CollectionPage, PaginationConfig } from "@typeful/storage/collection/ListController";
-import { Recipe } from "@typeful/types/Recipe";
+import { Recipe } from "@typeful/model/Recipe";
+import { SortController } from "./sorting";
+import { CollectionPage, PaginationConfig } from "./listController";
 
 export type CollectionRetrieveFn<T = any, Mode extends AsyncableMode = AsyncableMode> = (
   filter?: FilteringController['value'],

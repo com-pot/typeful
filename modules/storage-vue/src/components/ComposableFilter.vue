@@ -2,7 +2,7 @@
 import {computed, PropType} from "vue"
 
 import {useI18n} from "@typeful/vue-app/i18n"
-import { useRenderer } from "@typeful/model/recipes";
+import { useRenderer } from "@typeful/vue-app/rendering";
 
 import FilterRule from "./ComposableFilter/FilterRule.vue"
 import FieldSelection from "./FieldSelection.vue"

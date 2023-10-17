@@ -1,4 +1,4 @@
-import { FieldPathRaw } from "@typeful/model/path/pathTypes";
+import { FieldPathRaw } from "./path/pathTypes";
 import { FilterCondition } from "@typeful/storage-vue/collection/filter";
 
 export type Schema = {

@@ -6,7 +6,7 @@ import {DecInput} from "@typeful/vue-form"
 import { FieldRef } from "@typeful/model/Model"
 import { FilterCondition } from "@typeful/storage-vue/collection/filter";
 import { useI18n } from "@typeful/vue-app/i18n";
-import { useRenderer } from "@typeful/model/recipes";
+import { useRenderer } from "@typeful/vue-app/rendering";
 
 const props = defineProps({
   filterCondition: {type: Object as PropType<FilterCondition>, required: true},

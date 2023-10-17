@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { PropType } from 'vue';
 import { RouteLocationRaw } from 'vue-router';
-import { TextRecipe, useRenderer } from '@typeful/model/recipes';
+import { TextRecipe, useRenderer } from '@typeful/vue-app/rendering';
 
 const renderer = useRenderer()
 

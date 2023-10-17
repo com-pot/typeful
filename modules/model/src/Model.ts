@@ -1,16 +1,14 @@
-import { O } from "ts-toolbelt";
 import { merge } from "lodash";
-import { isRefSchema, RefSchema, Schema } from "@typeful/schema/Schema";
+import { isRefSchema, RefSchema, Schema } from "./Schema";
 import { createPath, FieldPath, FieldPathRaw, isFieldPath, pathToStr } from "./path/pathTypes";
-import { Recipe } from "@typeful/types/Recipe";
-import ValueTypes from "@typeful/types/ValueTypes";
+import { Recipe } from "./Recipe";
 
 export default class Model<T extends object = any> {
 
   private readonly fieldLocators: Record<string, FieldLocator> = {}
   public readonly spec: ModelSpec
 
-  constructor(spec: ModelSpec, private readonly ctx: ModelContext) {
+  constructor(spec: ModelSpec) {
     this.fieldLocators[''] = new FieldLocator(FieldIndex.createFromSchema(spec.schema, spec.meta))
     this.spec = spec
   }
@@ -18,10 +16,6 @@ export default class Model<T extends object = any> {
   locate(path?: FieldPath | FieldPathRaw): FieldLocator {
     const key = path ? pathToStr(path) : ''
     return this.fieldLocators[key]
-  }
-
-  setDefaults(target?: O.Partial<T, 'deep'>): T {
-    return this.ctx.types.setDefaults(this.spec.schema, target)
   }
 }
 
@@ -42,7 +36,6 @@ export type FieldNotFoundRef = {
 }
 
 export type GetFieldArg = FieldPathRaw | {path: FieldPathRaw, ui?: FieldRef['ui']}
-export type ModelContext = {types: ValueTypes}
 
 class FieldLocator {
 

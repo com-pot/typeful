@@ -1,7 +1,7 @@
-import { defineTypefulType } from "../typeful"
-import { SchemaField } from "../typeSystem"
+import { defineTypefulType } from "../dataTypes"
+import { Schema } from "../Schema"
 
-type NumberSpec = SchemaField & {
+type NumberSpec = Schema & {
     mode?: 'int' | string,
     minValue?: number,
     maxValue?: number,
